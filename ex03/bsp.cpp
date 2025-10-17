@@ -19,10 +19,11 @@ bool bsp(Point const a, Point const b, Point const c, Point const point)
     bool has_pos = (cross1 > 0) || (cross2 > 0) || (cross3 > 0);
 
     return !(has_neg && has_pos);
-
-    // ((has_neg && !has_pos) || (has_pos && !has_neg))
-    // -> !((has_neg && has_pos) || (!has_neg && !has_pos))
-    // -> !(has_neg && has_pos) && !(!has_neg && !has_pos)
-    // -> !(has_neg && has_pos) && (has_neg || has_pos)
-    // -> !(has_neg && has_pos)
 }
+
+
+// ((has_neg && !has_pos) || (has_pos && !has_neg))
+// -> !((has_neg && has_pos) || (!has_neg && !has_pos))
+// -> !(has_neg && has_pos) && !(!has_neg && !has_pos)
+// -> !(has_neg && has_pos) && (has_neg || has_pos)
+// -> !(has_neg && has_pos)

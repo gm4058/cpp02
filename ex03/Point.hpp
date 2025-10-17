@@ -13,12 +13,9 @@ public:
     Point(const float x, const float y);
     Point(const Point& other);
     ~Point();
+
+    Fixed getX() const;
+    Fixed getY() const;
 };
 
 #endif
-
-Point::Point() : x(Fixed(0)), y(Fixed(0)) {}
-Point::Point(const float x, const float y) : x(Fixed(x)), y(Fixed(y)) {}
-Point::Point(const Point& other) : x(other.x), y(other.y) {}
-Point::~Point() {}
-

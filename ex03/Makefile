@@ -4,7 +4,9 @@ CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = fixednum
 
 SRCS = main.cpp \
-	   Fixed.cpp
+	   Fixed.cpp \
+	   bsp.cpp \
+	   Point.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
