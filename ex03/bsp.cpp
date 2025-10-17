@@ -15,6 +15,9 @@ bool bsp(Point const a, Point const b, Point const c, Point const point)
     Fixed cross2 = cross(b, c, point);
     Fixed cross3 = cross(c, a, point);
 
+    if (cross1 == 0 || cross2 == 0 || cross3 == 0)
+        return (false);
+
     bool has_neg = (cross1 < 0) || (cross2 < 0) || (cross3 < 0);
     bool has_pos = (cross1 > 0) || (cross2 > 0) || (cross3 > 0);
 
